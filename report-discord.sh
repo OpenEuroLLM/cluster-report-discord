@@ -65,7 +65,7 @@ install() {
 update_usage_and_send_discord() {
   # Compute usage in file and send it to discord
   sreport -P -t hour --tres=gres/gpu cluster UserUtilizationByAccount Start=1970-01-01 End=now user "$USER" > $USAGE_FILE
-  echo $USAGE_FILE
+  echo "Saving compute usage in $USAGE_FILE (sreport output)"
 
   # Parse the output from sreport and sum the "Used" column
   # Skip header lines, extract the last field from each line, and sum them

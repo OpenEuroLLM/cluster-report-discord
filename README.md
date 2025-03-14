@@ -4,16 +4,21 @@ A tool that reports slurm compute usage on Discord automatically every week.
 
 ### Install
 
-Run the following to install the script:
+You must first set the discord channel id:
 ```bash
-DISCORD_CHANNEL_ID=...
+DISCORD_CHANNEL_ID=12345678910/ABCDEFGZ
+```
+given what was communicated by your team.
+If you want to create one for your discord channel, see next section to create one.
+
+Then Run the following to install the script:
+```bash
 wget -q -O "${HOME}/report-discord.sh" "https://raw.githubusercontent.com/OpenEuroLLM/cluster-report-discord/refs/heads/main/report-discord.sh" \
   && chmod +x "${HOME}/report-discord.sh" \
   && "${HOME}/report-discord.sh" install $DISCORD_CHANNEL_ID
 ```
 
 If your group communicated a channel-id, use this one. 
-Otherwise, see next section to create one to report compute on a new channel.
 
 ### Getting the channel-id
 
@@ -38,3 +43,9 @@ a week, if so it gets updated and send a compute report to discord with this for
 ```
 salinasd, CLUSTERNAME, GPU hours: 3953
 ```
+
+
+### Acknowledgement
+
+The tool is based on a previous version made by Eddie Bergman and Ivo Ranpant.
+It has been adapted to support Discord instead of Mattermost and simplified a bit.
