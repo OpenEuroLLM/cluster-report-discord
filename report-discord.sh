@@ -69,7 +69,8 @@ update_usage_and_send_discord() {
 
   # Parse the output from sreport and sum the "Used" column
   # Skip header lines, extract the last field from each line, and sum them
-  GPU_HOURS=$(awk -F'|' '/^kislurm/ {sum += $NF} END {print sum}' $USAGE_FILE)
+  HOSTNAME=$(hostname)
+  GPU_HOURS=$(awk -F'|' '$5 ~ /gres\/gpu/ {sum += $NF} END {print sum}' $USAGE_FILE)
   echo "Total GPU hours: $GPU_HOURS"
 
   # Send compute usage to Discord
