@@ -3,8 +3,8 @@
 # DONE call and parse sreport
 # DONE write timestamp, if current time is further than a week, send the message
 # DONE remove discord channel id from source
-# TODO push github
-# TODO instructions in README
+# DONE push github
+# DONE instructions in README
 # TODO ask someone to test
 # TODO share with group
 
