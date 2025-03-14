@@ -11,7 +11,7 @@
 
 WEBHOOK_URL=https://discord.com/api/webhooks/$DISCORD_CHANNEL_ID
 USAGE_FILE=partition-usage.txt
-CMDNAME=reporter
+CMDNAME=discordreporter
 
 
 install() {
@@ -40,7 +40,7 @@ install() {
         # Adds in bashrc or zshrc a hook to launch the script and also set there
         # the discord channel environment variable
         echo "" >> $rcfile
-        echo "# >>> cluster-reporter" >> $rcfile
+        echo "# >>> $CMDNAME" >> $rcfile
         echo "# This will run the script on login." >> $rcfile
         echo "# This will do nothing if the script has already run in the last while." >> $rcfile
         echo "export DISCORD_CHANNEL_ID=$DISCORD_CHANNEL_ID" >> $rcfile
@@ -50,7 +50,7 @@ install() {
         echo "  fi" >> $rcfile
         echo "}" >> $rcfile
         echo "$CMDNAME run" >> $rcfile
-        echo "# >>> cluster-reporter" >> $rcfile
+        echo "# >>> $CMDNAME" >> $rcfile
         echo "" >> $rcfile
     fi
 
