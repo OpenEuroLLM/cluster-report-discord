@@ -7,9 +7,9 @@ A tool that reports slurm compute usage on Discord automatically every week.
 Run the following to install the script:
 ```bash
 DISCORD_CHANNEL_ID=...
-wget -q -O "${HOME}/cluster_reporter.sh" "https://ml.informatik.uni-freiburg.de/research-artifacts/automl-private/cluster-reporter/cluster_reporter.sh" \
-  && chmod +x "${HOME}/cluster_reporter.sh" \
-  && "${HOME}/cluster_reporter.sh" install $DISCORD_CHANNEL_ID
+wget -q -O "${HOME}/report-discord.sh" "https://raw.githubusercontent.com/OpenEuroLLM/cluster-report-discord/refs/heads/main/report-discord.sh" \
+  && chmod +x "${HOME}/report-discord.sh" \
+  && "${HOME}/report-discord.sh" install $DISCORD_CHANNEL_ID
 ```
 
 If your group communicated a channel-id, use this one. 
