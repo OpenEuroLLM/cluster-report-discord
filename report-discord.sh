@@ -10,7 +10,7 @@
 
 
 WEBHOOK_URL=https://discord.com/api/webhooks/$DISCORD_CHANNEL_ID
-USAGE_FILE=partition-usage.txt
+USAGE_FILE=${HOME}/partition-usage.txt
 CMDNAME=discordreporter
 
 

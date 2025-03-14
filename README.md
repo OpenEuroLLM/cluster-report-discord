@@ -9,16 +9,15 @@ You must first set the discord channel id:
 DISCORD_CHANNEL_ID=12345678910/ABCDEFGZ
 ```
 given what was communicated by your team.
+
 If you want to create one for your discord channel, see next section to create one.
 
-Then Run the following to install the script:
+Then run the following to install the script:
 ```bash
 wget -q -O "${HOME}/report-discord.sh" "https://raw.githubusercontent.com/OpenEuroLLM/cluster-report-discord/refs/heads/main/report-discord.sh" \
   && chmod +x "${HOME}/report-discord.sh" \
   && "${HOME}/report-discord.sh" install $DISCORD_CHANNEL_ID
 ```
-
-If your group communicated a channel-id, use this one. 
 
 ### Getting the channel-id
 
