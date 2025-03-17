@@ -98,10 +98,14 @@ run() {
 
       # Check if file is older than a week
       if [ "$FILE_AGE" -gt "$ONE_WEEK" ]; then
-          echo "Report not send since a week, regenerating it and sending to discord"
+          if [ "$REPORT_VERBOSE" = "1" ]; then
+              echo "Report not send since a week, regenerating it and sending to discord"
+          fi
           update_usage_and_send_discord
       else
-          echo "Report already sent in less than a week, not resending."
+          if [ "$REPORT_VERBOSE" = "1" ]; then
+            echo "Report already sent in less than a week, not resending."
+          fi
       fi
   else
       echo "No previous report, regenerating it and sending to discord"

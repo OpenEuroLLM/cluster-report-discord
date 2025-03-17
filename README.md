@@ -19,7 +19,7 @@ wget -q -O "${HOME}/report-discord.sh" "https://raw.githubusercontent.com/OpenEu
   && "${HOME}/report-discord.sh" install $DISCORD_CHANNEL_ID
 ```
 
-### Getting the channel-id
+### Getting the channel-id of a discord channel
 
 
 To create one for a channel, click on the setting wheel of a channel "Edit Channel", 
@@ -43,6 +43,7 @@ a week, if so it gets updated and send a compute report to discord with this for
 salinasd, CLUSTERNAME, GPU hours: 3953
 ```
 
+To see a small report of the script, set `export REPORT_VERBOSE=1` in your bashrc/zshrc.
 
 ### Acknowledgement
 
