@@ -2,6 +2,12 @@
 
 A tool that reports slurm compute usage on Discord automatically every week.
 
+### Note
+
+The tool is fully functional and can be used for other projects. However, for OpenEuroLLM, we are now using [this tool](https://huggingface.co/spaces/openeurollm/compute_tracker/blob/main/README.md) for OpenEuroLLM as it has nicer visualizations.
+
+
+
 ### Install
 
 You must first set the discord channel id:
